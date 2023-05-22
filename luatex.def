@@ -5,19 +5,24 @@ From: ubuntu:lunar
 	Maintainer Klemen Berkovic
 	Contact roxor1992@gmail.com
 	Recipe https://github.com/kb2623/lutex-singularity
-	Tags latex, luatex
+	Tags latex, luatex, git, vi, vim, nvim
 	Version v0.0.1
 
 %post
-	## Install luatex
-	apt update && apt install -y texlive-luatex
-	
-	## Install git
-	apt update && apt install -y git
+	# Install luatex
+	apt update && apt install -y locales locales-all
+	locale-gen en_US.UTF-8
+	export LANG="en_US.UTF-8"
+	export LC_ALL="en_US.UTF-8"
+	apt update && apt install -y texlive-luatex texlive-full
 
+	# Install bash git tmux
+	apt update && apt install -y bash git tmux
+	
 	# Install Neovim
+	apt update && apt install -y software-properties-common
 	add-apt-repository ppa:neovim-ppa/unstable
-	apt update && apt install -y neovim
+	apt update && apt install -y neovim universal-ctags
 	update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 0
 	update-alternatives --config vi
 	update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 0
@@ -26,12 +31,13 @@ From: ubuntu:lunar
 	update-alternatives --config editor
 
 %environment
-	export LC_ALL=C
+	export LANG="en_US.UTF-8"
+	export LC_ALL="en_US.UTF-8"
 	export SHELL=/bin/bash
 
 %runscript
     exec /bin/bash "$@"
 
 %help
-	This is a container that runs bash and luatex.
+	This is a container that runs bash, luatex, vi, vim and nvim.
 
