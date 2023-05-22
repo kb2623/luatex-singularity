@@ -33,5 +33,5 @@ From: ubuntu:lunar
     exec /bin/bash "$@"
 
 %help
-	This is a container that runs Python and NiaPy.
+	This is a container that runs bash and luatex.
 
