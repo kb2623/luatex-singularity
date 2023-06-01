@@ -16,8 +16,8 @@ From: ubuntu:lunar
 	export LC_ALL="en_US.UTF-8"
 	apt update && apt install -y texlive-luatex texlive-full biber
 
-	# Install bash git
-	apt update && apt install -y bash git
+	# Install bash git tmux
+	apt update && apt install -y bash git tmux
 	
 	# Install Neovim
 	apt update && apt install -y software-properties-common
