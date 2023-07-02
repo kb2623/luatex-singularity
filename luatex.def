@@ -22,7 +22,7 @@ From: ubuntu:lunar
 	# Install Neovim
 	apt update && apt install -y software-properties-common
 	add-apt-repository ppa:neovim-ppa/unstable
-	apt update && apt install -y neovim universal-ctags
+	apt update && apt install -y neovim
 	update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 0
 	update-alternatives --config vi
 	update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 0
