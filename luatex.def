@@ -17,7 +17,7 @@ From: ubuntu:lunar
 	apt update && apt install -y texlive-luatex texlive-full biber
 
 	# Install zsh bash git tmux ctags
-	apt update && apt install -y zsh bash git tmux universal-ctags
+	apt update && apt install -y zsh git bash make tmux universal-ctags
 	
 	# Install Neovim
 	apt update && apt install -y software-properties-common
