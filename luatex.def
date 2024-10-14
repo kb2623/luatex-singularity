@@ -15,6 +15,7 @@ From: ubuntu:lunar
 	export LANG="en_US.UTF-8"
 	export LC_ALL="en_US.UTF-8"
 	apt update && apt install -y texlive-luatex texlive-full biber
+	apt update && apt install -y inkscape
 
 	# Install zsh bash git tmux ctags
 	apt update && apt install -y zsh git bash make universal-ctags
