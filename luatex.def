@@ -1,5 +1,5 @@
 BootStrap: docker
-From: ubuntu:lunar
+From: ubuntu:noble
 
 %labels
 	Maintainer Klemen Berkovic
